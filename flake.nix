@@ -164,5 +164,9 @@
         };
 
         formatter = pkgs.nixpkgs-fmt;
+
+        homeManagerModules.default = { pkgs, ... }: {
+          home.packages = with pkgs; [ photocraft-cli ];
+        };
       });
 }
