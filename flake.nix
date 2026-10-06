@@ -33,6 +33,7 @@
         buildInputs = with pkgs; [
           # Wayland/X11 dependencies for wgpu/egui
           libxkbcommon
+          libxkbcommon-x11
           wayland
           wayland-protocols
           xorg.libX11
@@ -40,9 +41,13 @@
           xorg.libXrandr
           xorg.libXi
           xorg.libXext
+          xorg.libXxcb
+          xorg.libxcb
           # OpenGL/Vulkan
           libGL
           vulkan-loader
+          libEGL
+          mesa
           # Font/config
           fontconfig
           freetype
